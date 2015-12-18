@@ -17,3 +17,30 @@ h1 {
   margin: 0;
   padding: 20px;
 }
+
+.button {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  left: -30px;
+
+  &.pencil {
+    background-color: yellow;
+  }
+
+  &.cancel {
+    background-color: red;
+  }
+
+  &.save {
+    background-color: green;
+  }
+}
+
+input.editing {
+  font-family: 'Copernicus';
+  font-size: 35pt;
+  height: 60px;
+  padding: 5px;
+  width: 100%;
+}
