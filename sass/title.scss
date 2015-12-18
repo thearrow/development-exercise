@@ -2,7 +2,7 @@
 $heading-font: 'Copernicus';
 
 #title {
-  bottom: 5px;
+  bottom: -4px;
   left: 15%;
   position: absolute;
   width: 60%;
@@ -17,6 +17,26 @@ h1 {
   line-height: 49pt;
   margin: 0;
   padding: 20px;
+}
+
+svg.title {
+  font-size: 50pt;
+  width: 100%;
+
+  #alpha {
+    fill: #fff;
+  }
+
+  .titleLine {
+    fill: #000;
+    font-family: $heading-font;
+    letter-spacing: -1pt;
+  }
+
+  #base {
+    fill: #fff;
+    mask: url(#mask);
+  }
 }
 
 .button {
