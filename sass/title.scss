@@ -1,6 +1,19 @@
 @import "../exercise/fonts/copernicus_webfont/font.css";
 
+#title {
+  bottom: 0;
+  left: 15%;
+  position: absolute;
+  width: 60%;
+}
+
 h1 {
+  background: rgba(255,255,255,.8);
+  color: #222;
   font-family: 'Copernicus';
+  font-size: 50pt;
+  letter-spacing: -1pt;
+  line-height: 49pt;
   margin: 0;
+  padding: 20px;
 }
