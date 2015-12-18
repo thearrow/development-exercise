@@ -5,10 +5,23 @@ export class TitleEdit extends Component {
     super(props);
   }
 
+  validateTitle() {
+    if(this.props.text.length === 0) return false;
+    return true;
+  }
+
+  handleKeyDown = (event) => {
+    if (event.key === 'Enter' && this.validateTitle()) {
+      this.props.handleSave();
+    } else if (event.key === 'Escape') {
+      this.props.handleCancel();
+    }
+  }
+
   render() {
     let text = this.props.text;
     let saveBtnClass = 'button save';
-    if (this.props.text.length === 0) {
+    if (!this.validateTitle()) {
       saveBtnClass += ' disabled';
     }
 
@@ -20,7 +33,8 @@ export class TitleEdit extends Component {
           onClick={this.props.handleSave}/>
         <input className='editing' type="text"
           value={text}
-          onChange={this.props.handleChange}/>
+          onChange={this.props.handleChange}
+          onKeyDown={this.handleKeyDown}/>
       </div>
     );
   }
