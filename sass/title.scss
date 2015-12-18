@@ -1,4 +1,5 @@
 @import "../exercise/fonts/copernicus_webfont/font.css";
+$heading-font: 'Copernicus';
 
 #title {
   bottom: 5px;
@@ -10,7 +11,7 @@
 h1 {
   background: rgba(255,255,255,.8);
   color: #222;
-  font-family: 'Copernicus';
+  font-family: $heading-font;
   font-size: 50pt;
   letter-spacing: -1pt;
   line-height: 49pt;
@@ -24,6 +25,14 @@ h1 {
   left: -30px;
   position: relative;
   width: 30px;
+  transition: all .2s;
+
+
+  &:hover {
+    filter: brightness(1.1);
+    -webkit-filter: brightness(1.1);
+    transition: all .2s;
+  }
 
   &.pencil {
     background: url('../exercise/assets/pencil2.svg');
@@ -44,7 +53,7 @@ h1 {
 }
 
 input.editing {
-  font-family: 'Copernicus';
+  font-family: $heading-font;
   font-size: 35pt;
   height: 60px;
   padding: 5px;

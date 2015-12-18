@@ -1,3 +1,5 @@
+$heading-font: 'Copernicus';
+
 body {
   margin: 0;
   padding: 0;
@@ -35,7 +37,7 @@ header {
 
   .author {
     color: #6F4F31;
-    font-family: 'Copernicus';
+    font-family: $heading-font;
     text-transform: none;
   }
 
@@ -56,5 +58,12 @@ main {
     font-family: Palatino;
     font-size: 12pt;
     line-height: 22pt;
+  }
+
+  blockquote {
+    color: #8A98A6;
+    font-family: $heading-font;
+    font-size: 20pt;
+    margin: 50px 40px 50px -40px;
   }
 }
