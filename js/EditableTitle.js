@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../sass/title.scss';
 
 class Title extends Component {
   constructor(props) {
@@ -24,7 +25,7 @@ class Title extends Component {
   }
 }
 
-export class App extends Component {
+export class EditableTitle extends Component {
   render() {
     return (
       <Title text={"Are we out of the woods yet?"}/>
