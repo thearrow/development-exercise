@@ -25,15 +25,20 @@ h1 {
   left: -30px;
 
   &.pencil {
-    background-color: yellow;
+    background: url('../exercise/assets/pencil2.svg');
   }
 
   &.cancel {
-    background-color: red;
+    background: url('../exercise/assets/x2.svg');
   }
 
   &.save {
-    background-color: green;
+    background: url('../exercise/assets/checkmark2.svg');
+
+    &.disabled {
+      background: url('../exercise/assets/checkmark2-disabled.svg');
+      pointer-events: none;
+    }
   }
 }
 

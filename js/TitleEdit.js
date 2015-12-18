@@ -7,12 +7,16 @@ export class TitleEdit extends Component {
 
   render() {
     let text = this.props.text;
+    let saveBtnClass = 'button save';
+    if (this.props.text.length === 0) {
+      saveBtnClass += ' disabled';
+    }
 
     return (
       <div>
         <div className='button cancel'
           onClick={this.props.handleCancel}/>
-        <div className='button save'
+        <div className={saveBtnClass}
           onClick={this.props.handleSave}/>
         <input className='editing' type="text"
           value={text}
