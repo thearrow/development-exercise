@@ -10,7 +10,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
-    publicPath: '/static/'
+    publicPath: 'http://0.0.0.0:3000/static/'
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
@@ -28,7 +28,7 @@ module.exports = {
         loaders: ['style', 'css?sourceMap', 'sass?sourceMap']
       },
       {
-        test: /\.(woff|woff2|ttf|eot|svg)$/,
+        test: /\.(woff|woff2|ttf|eot|svg|jpg|png)$/,
         loader: 'file'
       }
     ]
