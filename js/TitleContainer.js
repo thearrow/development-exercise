@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { TitleView } from './TitleView';
 import { TitleEdit } from './TitleEdit';
 import '../sass/title.scss';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 export class TitleContainer extends Component {
 
@@ -37,18 +38,35 @@ export class TitleContainer extends Component {
   }
 
   render() {
+    let partial = '';
+
     if(this.state.editing) {
-      return(
-        <TitleEdit text={this.state.text}
+      partial =
+        <TitleEdit
+          text={this.state.text}
+          key='title-edit'
           handleCancel={this.handleCancel}
           handleSave={this.handleSave}
-          handleChange={this.handleChange}/>
-      );
+          handleChange={this.handleChange}/>;
     } else {
-      return (
-        <TitleView text={this.state.text}
-          handleEdit={this.handleEdit}/>
-      );
+      partial =
+        <TitleView
+          key='title-view'
+          text={this.state.text}
+          handleEdit={this.handleEdit}/>;
     }
+
+    return(
+        <ReactCSSTransitionGroup
+          transitionName='title-fade'
+          transitionEnterTimeout={300}
+          transitionLeaveTimeout={300}
+          transitionAppear={true}
+          transitionAppearTimeout={500}>
+
+        {partial}
+
+        </ReactCSSTransitionGroup>
+      );
   }
 }

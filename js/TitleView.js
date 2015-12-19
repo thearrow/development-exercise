@@ -48,7 +48,7 @@ export class TitleView extends Component {
     }
 
     return (
-      <div>
+      <div className='title-view'>
         <div className='button pencil'
           onClick={this.props.handleEdit}/>
         <svg className='title' style={{height: (this.lines.length + .4) + 'em'}}>

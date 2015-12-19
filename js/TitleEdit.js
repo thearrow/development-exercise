@@ -26,7 +26,7 @@ export class TitleEdit extends Component {
     }
 
     return (
-      <div>
+      <div className='title-edit'>
         <div className='button cancel'
           onClick={this.props.handleCancel}/>
         <div className={saveBtnClass}
