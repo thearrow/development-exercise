@@ -1,0 +1,31 @@
+@import 'vars';
+
+.title-view {
+  bottom: -4px;
+  position: absolute;
+  width: 100%;
+}
+
+.button.pencil {
+  background: url('../exercise/assets/pencil2.svg');
+}
+
+svg.title {
+  font-size: 50pt;
+  width: 100%;
+
+  #alpha {
+    fill: #fff;
+  }
+
+  .titleLine {
+    fill: #000;
+    font-family: $heading-font;
+    letter-spacing: -1pt;
+  }
+
+  #base {
+    fill: #fff;
+    mask: url(#mask);
+  }
+}

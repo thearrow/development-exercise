@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../styles/TitleEdit.scss';
 
 export class TitleEdit extends Component {
   constructor(props) {

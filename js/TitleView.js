@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../styles/TitleView.scss';
 
 export class TitleView extends Component {
   constructor(props) {

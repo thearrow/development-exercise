@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { TitleView } from './TitleView';
 import { TitleEdit } from './TitleEdit';
-import '../sass/title.scss';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import '../styles/TitleContainer.scss';
 
 export class TitleContainer extends Component {
 
@@ -60,9 +60,7 @@ export class TitleContainer extends Component {
         <ReactCSSTransitionGroup
           transitionName='title-fade'
           transitionEnterTimeout={300}
-          transitionLeaveTimeout={300}
-          transitionAppear={true}
-          transitionAppearTimeout={500}>
+          transitionLeaveTimeout={300}>
 
         {partial}
 

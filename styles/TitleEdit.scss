@@ -1,0 +1,28 @@
+@import 'vars';
+
+.title-edit {
+  bottom: 40px;
+  position: absolute;
+  width: 100%;
+}
+
+.button.cancel {
+  background: url('../exercise/assets/x2.svg');
+}
+
+.button.save {
+  background: url('../exercise/assets/checkmark2.svg');
+
+  &.disabled {
+    background: url('../exercise/assets/checkmark2-disabled.svg');
+    pointer-events: none;
+  }
+}
+
+input.editing {
+  font-family: $heading-font;
+  font-size: 35pt;
+  height: 60px;
+  padding: 5px;
+  width: 100%;
+}
