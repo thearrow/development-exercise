@@ -14,6 +14,10 @@ header {
   margin: 0 auto 50px auto;
   position: relative;
   width: 100%;
+
+  @media #{$small} {
+    height: 300px;
+  }
 }
 
 .logo {
@@ -30,10 +34,15 @@ header {
   display: inline-block;
   font-family: $sans-font;
   font-size: 10pt;
-  height: 500px;
   margin-left: 15%;
   text-transform: uppercase;
   width: 20%;
+
+  @media #{$small} {
+    margin: 0 auto;
+    text-align: center;
+    width: 90%;
+  }
 
   .author {
     color: #6F4F31;
@@ -53,6 +62,11 @@ main {
   vertical-align: top;
   width: 40%;
 
+  @media #{$small} {
+    padding: 10px;
+    width: 90%;
+  }
+
   p {
     color: #333;
     font-family: $serif-font;
@@ -65,5 +79,9 @@ main {
     font-family: $heading-font;
     font-size: 20pt;
     margin: 50px 40px 50px -40px;
+
+    @media #{$small} {
+      margin: 30px;
+    }
   }
 }

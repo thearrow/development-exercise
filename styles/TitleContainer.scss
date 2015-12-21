@@ -1,3 +1,4 @@
+@import 'vars';
 @import "../exercise/fonts/copernicus_webfont/font.css";
 
 #title {
@@ -5,6 +6,11 @@
   left: 15%;
   position: absolute;
   width: 768px;
+
+  @media #{$small} {
+    left: 35px;
+    width: 90%;
+  }
 }
 
 .title-fade-enter {
