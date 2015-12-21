@@ -33,7 +33,11 @@ export class TitleView extends Component {
     return lines;
   }
 
-  render() {
+  /**
+   * Create SVG <text> element for each line of the title
+   * @return {JSX[]} array of JSX for SVG text elements
+   */
+  createSVGTextElements() {
     let titleLines = [];
     for (let i = 0; i < this.lines.length; i++) {
       titleLines.push(
@@ -47,6 +51,12 @@ export class TitleView extends Component {
         </text>
       );
     }
+
+    return titleLines;
+  }
+
+  render() {
+    let titleLines = this.createSVGTextElements();
 
     return (
       <div className='title-view'>

@@ -30,12 +30,21 @@ export class TitleEdit extends Component {
       <div className='title-edit'>
         <div className='button cancel'
           onClick={this.props.handleCancel}/>
+
         <div className={saveBtnClass}
           onClick={this.props.handleSave}/>
-        <input className='editing' type="text"
-          value={text}
-          onChange={this.props.handleChange}
-          onKeyDown={this.handleKeyDown}/>
+
+        <div className='editing-container'>
+          <input className='editing' type="text"
+            value={text}
+            onChange={this.props.handleChange}
+            onKeyDown={this.handleKeyDown}/>
+
+          <div className='slug'>
+            <span className='slug light'>slug: </span>
+            {this.props.slug}
+          </div>
+        </div>
       </div>
     );
   }

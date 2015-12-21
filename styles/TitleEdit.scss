@@ -1,7 +1,7 @@
 @import 'vars';
 
 .title-edit {
-  bottom: 40px;
+  bottom: 0;
   position: absolute;
   width: 100%;
 }
@@ -19,10 +19,31 @@
   }
 }
 
+.editing-container {
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 15px;
+}
+
 input.editing {
+  box-sizing: border-box;
   font-family: $heading-font;
   font-size: 35pt;
   height: 60px;
   padding: 5px;
   width: 100%;
+}
+
+
+.slug {
+  color: #888;
+  font-family: Futura;
+  font-size: 10pt;
+  height: 20px;
+  margin-top: 5px;
+  width: 100%;
+
+  &.light {
+    color: #aaa;
+  }
 }

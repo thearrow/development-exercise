@@ -13,6 +13,13 @@ export class TitleContainer extends Component {
       text: 'Are we out of the woods yet?',
       previousText: ''
     };
+    this.database = [
+      'it-is-impossible-to-walk-rapidly-and-be-unhappy',
+      'we-dont-get-offered-crises-they-arrive',
+      'i-have-seen-the-future-and-it-doesnt-work',
+      'i-dwell-in-possibility',
+      'knowledge-is-power'
+    ];
   }
 
   handleEdit = () => {
@@ -37,6 +44,20 @@ export class TitleContainer extends Component {
     this.setState({text: event.target.value});
   }
 
+  slugify(text) {
+    if (text.length === 0) return 'please enter a post title';
+
+    let result = text.toLowerCase();
+    result = result.replace(/ /gi, '-');
+    result = result.replace(/[^(0-9A-Za-z\-)]/gi, '');
+
+    if (this.database.indexOf(result) > -1) {
+      result += '-' + Math.random().toString(36).slice(-5);
+    }
+
+    return result;
+  }
+
   render() {
     let partial = '';
 
@@ -45,6 +66,7 @@ export class TitleContainer extends Component {
         <TitleEdit
           text={this.state.text}
           key='title-edit'
+          slug={this.slugify(this.state.text)}
           handleCancel={this.handleCancel}
           handleSave={this.handleSave}
           handleChange={this.handleChange}/>;
