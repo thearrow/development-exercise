@@ -50,7 +50,6 @@ export class TitleContainer extends Component {
     let result = text.toLowerCase();
     result = result.replace(/ /gi, '-');
     result = result.replace(/[^(0-9A-Za-z\-)]/gi, '');
-
     if (this.database.indexOf(result) > -1) {
       result += '-' + Math.random().toString(36).slice(-5);
     }
